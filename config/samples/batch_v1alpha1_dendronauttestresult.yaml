@@ -1,0 +1,7 @@
+apiVersion: batch.dendronaut.example.com/v1alpha1
+kind: DendronautTestResult
+metadata:
+  name: dendronauttestresult-sample
+spec:
+  # Add fields here
+  foo: bar

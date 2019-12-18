@@ -1,0 +1,20 @@
+# permissions to do viewer dendronauttestresults.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: dendronauttestresult-viewer-role
+rules:
+- apiGroups:
+  - batch.dendronaut.example.com
+  resources:
+  - dendronauttestresults
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - batch.dendronaut.example.com
+  resources:
+  - dendronauttestresults/status
+  verbs:
+  - get

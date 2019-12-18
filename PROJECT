@@ -1,3 +1,10 @@
 domain: dendronaut.example.com
 repo: github.com/dskatz/dendronaut-operator-kb
+resources:
+- group: batch
+  kind: DendronautJob
+  version: v1alpha1
+- group: batch
+  kind: DendronautTestResult
+  version: v1alpha1
 version: "2"
