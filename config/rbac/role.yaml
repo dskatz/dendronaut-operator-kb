@@ -1,0 +1,48 @@
+
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  creationTimestamp: null
+  name: manager-role
+rules:
+- apiGroups:
+  - batch.dendronaut.example.com
+  resources:
+  - dendronautjobs
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - batch.dendronaut.example.com
+  resources:
+  - dendronautjobs/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - batch.dendronaut.example.com
+  resources:
+  - dendronauttestresults
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - batch.dendronaut.example.com
+  resources:
+  - dendronauttestresults/status
+  verbs:
+  - get
+  - patch
+  - update

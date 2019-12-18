@@ -28,17 +28,20 @@ type DendronautTestResultSpec struct {
 	// Important: Run "make" to regenerate code after modifying this file
 
 	// Foo is an example field of DendronautTestResult. Edit DendronautTestResult_types.go to remove/update
-	Foo string `json:"foo,omitempty"`
+	TestName string `json:"testName"`
+	Pass     bool   `json:"pass"`
+	Message  string `json:"message"`
 }
 
 // DendronautTestResultStatus defines the observed state of DendronautTestResult
 type DendronautTestResultStatus struct {
 	// INSERT ADDITIONAL STATUS FIELD - define observed state of cluster
 	// Important: Run "make" to regenerate code after modifying this file
+	Published bool `json:"published"`
 }
 
 // +kubebuilder:object:root=true
-
+// +kubebuilder:subresource:status
 // DendronautTestResult is the Schema for the dendronauttestresults API
 type DendronautTestResult struct {
 	metav1.TypeMeta   `json:",inline"`

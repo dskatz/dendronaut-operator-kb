@@ -16,6 +16,7 @@ limitations under the License.
 package v1alpha1
 
 import (
+	batchv1beta1 "k8s.io/api/batch/v1beta1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 )
 
@@ -26,9 +27,8 @@ import (
 type DendronautJobSpec struct {
 	// INSERT ADDITIONAL SPEC FIELDS - desired state of cluster
 	// Important: Run "make" to regenerate code after modifying this file
-
-	// Foo is an example field of DendronautJob. Edit DendronautJob_types.go to remove/update
-	Foo string `json:"foo,omitempty"`
+	Namespace string                   `json:"namespace"`
+	Cron      batchv1beta1.CronJobSpec `json:"cron"`
 }
 
 // DendronautJobStatus defines the observed state of DendronautJob
