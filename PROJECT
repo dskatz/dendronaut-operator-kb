@@ -1,0 +1,3 @@
+domain: dendronaut.example.com
+repo: github.com/dskatz/dendronaut-operator-kb
+version: "2"
